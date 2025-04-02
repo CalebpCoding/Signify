@@ -1,0 +1,142 @@
+/**************************************************************
+This is the css for the help and information page
+***************************************************************/
+
+:root {
+    --color1: #016024;
+    --text1: white;
+    --color2: #008947;
+    --text2: white;
+    --color3: #CD87A3;
+    --text3: black;
+    --color4: #B00B69;
+    --text4: white;
+    --color5: #810343;
+    --text5: white;
+    --color6: #03223f;
+    --color7: #3d5369;
+
+    --background: white;
+    --main-text: black;
+
+    --text-style: 700 12px / 12px Verdana, sans-serif;
+}
+
+.lm {
+    background-color: var(--color6);
+    color: var(--text1);
+    font-size: medium;
+}
+
+.con {
+    position:relative;
+    left:50%;
+    line-height: normal;
+}
+
+p{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: normal;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.banner {
+    background-color: var(--color6);
+    color: var(--text1);
+    margin-bottom: 5%;
+    padding: 10px;
+    font: var(--text-style);
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+    margin:auto;
+    width: 230%;
+}
+
+ul li {
+    font-size: medium;
+    font-weight: 300;
+    margin-bottom:2%;
+}
+
+.dark-mode {
+    --color1: #cb2922;
+    --text1: white;
+    --color2: #ff4942;
+    --text2: black;
+    --color3: #8ed6e6;
+    --text3: black;
+    --color4: #00bcd4;
+    --text4: black;
+    --color5: #0091a9;
+    --text5: black;
+
+    --background: #333;
+    --main-text: white;
+}
+
+
+
+html, body {
+    font: var(--text-style);
+    color: var(--main-text);
+    padding: 10px;
+    max-width: 40vw; /* Keeps content on the left */
+    margin: 0px;
+    border: 0px;
+}
+
+p {
+    font: var(--text-style);
+    font-weight: 400;
+}
+
+details {
+    padding: 10px;
+    position: relative; /* Allows proper positioning for child elements */
+}
+
+.side-image {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    width: 35vw;
+    height: 80vh;
+    transform: translateY(-50%); /* Centers vertically */
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#im {
+    border-radius: 10px;
+}
+
+#submitted-text {
+    background-color: yellow;
+}
+
+#asl-translations {
+    background-color: orange;
+}
+
+#generated-results {
+    background-color: green;
+}
+
+#citations {
+    background-color: blue;
+}
+
+#disclaimer {
+    background-color: purple;
+}
+
