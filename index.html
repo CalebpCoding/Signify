@@ -1,102 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head class="banner">
-    <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signify Help Page</title>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help/Documentation Page for Capstone Chrome Extension</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
 </head>
-<body class="lm">
-    <div class="banner">
-        <h1>Signify</h1>
-        <img src="images/icon-light-mode.png" alt="Signify Logo" width="40" height="50">
-        
-    </div>
+<body class="bg-dark text-light">
 
-    <div class="con">
-        <h1 style="font-size: xx-large;">How to Use Signify</h1><br>
+  <!-- Banner -->
+  <header class="bg-secondary text-center py-3 mb-4">
+    <h1 class="fw-bold">Welcome to the Signify Information Page</h1>
+  </header>
 
-        <p style="font-size:x-large;">Thank you for using Signify! Here's the basic steps to use our extension.</p>
-
-
-        <ol>
-            <li>Select some text from the article you are looking at and paste it into our extension.</li>
-            <li>Press Submit. the Signify extension will then provide results about the text you have selected.</li>
+  <main class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h2>How to Use Signify</h2>
+        <p>Thank you for using Signify! Here's the basic steps to use our extension.</p>
+        <ol class="mb-4">
+          <li>Select some text from the article you are looking at and paste it into our extension.</li>
+          <li>Press Submit. The Signify extension will then provide results about the text you have selected.</li>
         </ol>
-        <br><br>
-        <p style="font-size: large;">Below are more details about the various features of the Signify extension.</p>
+        <p>Below are more details about the various features of the Signify extension.</p>
 
-        <div>
-            <div class="side-image" id="settings">
-                <img src="images/light.png" alt="Settings" id="im" width="80%" height="80%">
+        <!-- Bootstrap-style Accordions (replacement for details/summary) -->
+        <div class="accordion" id="signifyAccordion">
+          <div class="accordion-item bg-secondary text-light">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#settings">
+                Settings
+              </button>
+            </h2>
+            <div id="settings" class="accordion-collapse collapse" data-bs-parent="#signifyAccordion">
+              <div class="accordion-body">
+                <p>The Signify Extension has the following settings:</p>
+                <ul>
+                  <li>Dark Mode</li>
+                </ul>
+              </div>
             </div>
-        <details name="bar">
-            <summary>Settings</summary>
-            <p style="font-size: large;">The Signify Extension has the following settings:</p>
-            <ul>
-                <li>Dark Mode</li>
-                <li>Load ASL Translations</li>
-            </ul>
+          </div>
 
-        </details>
+          <div class="accordion-item bg-secondary text-light">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#text">
+                Submitted Text
+              </button>
+            </h2>
+            <div id="text" class="accordion-collapse collapse" data-bs-parent="#signifyAccordion">
+              <div class="accordion-body">
+                <p>The Signify extension allows users to select text and enter it into the extension via three methods:</p>
+                <ul>
+                  <li>Highlighting text on a webpage and right-clicking to open the Signify extension</li>
+                  <li>Right-clicking and opening the Signify extension</li>
+                  <li>Copying and Pasting text into the Signify extension pop-up window</li>
+                </ul>
+                <p>After the text is submitted, you can do the following before viewing Generated Results:</p>
+                <ul>
+                  <li>Pronunciation - Audio/Text-to-Speech Pronunciation of the text</li>
+                  <li>Sign Language - A generated Sign Language Interpretation of the text</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <details name="bar">
-            <summary>Submitted Text</summary>
+          <div class="accordion-item bg-secondary text-light">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#asl">
+                ASL Translations
+              </button>
+            </h2>
+            <div id="asl" class="accordion-collapse collapse" data-bs-parent="#signifyAccordion">
+              <div class="accordion-body">
+                <p>After clicking on the 'Sign Language' Buttons, a video will appear on the Signify extension popup below the submitted text.</p>
+                <p>This video will be a series of clips that demonstrate translations of individual words within the submitted text.</p>
+              </div>
+            </div>
+          </div>
 
-            <p style="font-size: large;">The Signify extension allows users to select text and enter it into the extension via three methods:</p>
-            <ul>
-                <li>Highlighting text on a webpage and right-clicking to open the Signify extension</li>
-                <li>Right-clicking and opening the Signify extension</li>
-                <li>Copying and Pasting text into the Signify extension pop-up window</li>
-            </ul>
+          <div class="accordion-item bg-secondary text-light">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#results">
+                Generated Results
+              </button>
+            </h2>
+            <div id="results" class="accordion-collapse collapse" data-bs-parent="#signifyAccordion">
+              <div class="accordion-body">
+                <p>After submitting your text into the Signify extension, the extension will generate results about key words/phrases from the submitted text.</p>
+                <ul>
+                  <li>Definitions</li>
+                  <li>Frequently Asked Questions</li>
+                  <li>Additional Sources</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-            <p style="font-size: large;">After the text is submitted, you can do the following before viewing Generated Results:</p>
-            <ul>
-                <li>Pronunciation - Audio/Text-to-Speech Pronunciation of the text</li>
-                <li>Sign Language - A generated Sign Language Interpretation of the text</li>
-            </ul>
-        </details>
-
-        <details name="bar">
-            <summary>ASL Translations</summary>
-
-            <p style="font-size: medium;">After clicking on the 'Sign Language' Buttons, a video will appear on the Signify extension popup below the submitted text.</p>
-
-            <p style="font-size: medium;">This video will be a series of clips that demonstrate translations of individual words within the submitted text.</p>
-        </details>
-
-        <details name="bar">
-            <summary>Generated Results</summary>
-
-            <p style="font-size: medium;">After submitting your text into the Signify extension, the extension will generate results about key words/phrases from the submitted text.</p>
-            
-            <p style="font-size: large;">These are the results displayed on the app:</p>
-
-            <ul>
-                <li>Definitions</li>
-                <li>Frequently Asked Questions</li>
-                <li>Additional Sources</li>
-            </ul>
-        </details>
-
-        <details name="bar">
-            <summary>Disclaimer(s)</summary>
-
-            <p style="font-size: medium;">
-                American Sign Language is a very complex language with many variations and styles. 
-                Users should be cautious as they use the ASL translation feature of the Signify extension, 
-                as the Signify extension is mostly a "Proof of Concept" of generating a Sign Language Interpretation of text. 
-                The Signify extension has a limited amount of words that can be used for the translation and may not be able 
-                to translate very complex/uncommon words. 
-            </p>
-        </details>
+          <div class="accordion-item bg-secondary text-light">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#disclaimer">
+                Disclaimer(s)
+              </button>
+            </h2>
+            <div id="disclaimer" class="accordion-collapse collapse" data-bs-parent="#signifyAccordion">
+              <div class="accordion-body">
+                <p>
+                  American Sign Language is a very complex language with many variations and styles. 
+                  Users should be cautious as they use the ASL translation feature of the Signify extension, 
+                  as the Signify extension is mostly a "Proof of Concept" of generating a Sign Language Interpretation of text. 
+                  The Signify extension has a limited amount of words that can be used for the translation and may not be able 
+                  to translate very complex/uncommon words. 
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Image on right side -->
+      <div class="col-md-5 d-none d-md-block">
+        <img src="images/screencap_1.png" alt="Screencap" class="img-fluid side-image">
+        <img src="images/screencap_2.png" alt="Screencap" class="img-fluid side-image">
+      </div>
     </div>
-<br><br>
-<footer>
-    <p>&copy; 2025 Signify.</p>
-</footer>
-    
+  </main>
+
+  <footer class="text-center py-4 mt-5 border-top">
+    <p class="mb-0">&copy; 2025 Signify</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
