@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Help/Documentation Page for Capstone Chrome Extension</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .team-image {
+      width: 65px;       /* Fixed width */
+      height: 65px;      /* Fixed height */
+      object-fit: cover;  /* Ensures images stay neat even if not square */
+      border-radius: 8px; /* Optional: rounds the edges slightly */
+    }
   
+    .team-container {
+      max-height: 100vh;   /* Keeps height relative to the window */
+      overflow-y: auto;   /* Adds scroll if needed */
+    }
+  </style>  
 </head>
 <body class="bg-dark text-light">
 
@@ -122,10 +134,50 @@
 
       <!-- Image on right side -->
       <div class="col-md-5 d-none d-md-block">
-        <!-- Since we can add images to the sections, instead we should add maybe our own names/credits to this section-->
+        <div class="container text-center team-container">
+          <h3 class="mb-4">Meet Team CAZNEA</h3> <!-- Title added here -->
+          <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/calebPickett.png" alt="Caleb Pickett" class="img-fluid team-image">
+              <p class="mt-2">Caleb Pickett: Backend</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/alexEvans.png" alt="Alex Evans" class="img-fluid team-image">
+              <p class="mt-2">Alex Evans: Backend</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/zachWarren.png" alt="Zach Warren" class="img-fluid team-image">
+              <p class="mt-2">Zachary Warren: ASL Team</p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/nathanRosales.png" alt="Nathan Rosales" class="img-fluid team-image">
+              <p class="mt-2">Nathan Rosales: ASL Team</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/eddyAsante.png" alt="Eddy Asante" class="img-fluid team-image">
+              <p class="mt-2">Eddy Asante: Backend</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="CAZNEA/anselJohn1.png" alt="Ansel John" class="img-fluid team-image">
+              <p class="mt-2">Ansel John: Frontend</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-4">
+              <img src="CAZNEA/wajdiAljedaani.png" alt="Wajdi Aljedaani" class="img-fluid team-image">
+              <p class="mt-2">Wajdi Aljedaani: Sponsor</p>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      
     </div>
   </main>
+
+
 
   <footer class="text-center py-4 mt-5 border-top">
     <p class="mb-0">&copy; 2025 Signify</p>
